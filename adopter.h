@@ -5,25 +5,22 @@
 #pragma once
 
 using std::string;
-using std::cout;
-using std::endl;
 using std::vector;
 
-class Adoptee {
+class Adopter {
 public:
     // METHODS
     // default constructor
-    Adoptee(string input_name, int hours);
+    Adopter(string input_name, int hours);
 
-    // inserts the name of a desired plant into the list
-    void desiredPlant(string st);
+    // inserts the name of a desired plant into the list via user input
+    void desiredPlant();
 
-    // adopt: adopts the plant by inserting into the list
+    // adopts the plant by inserting into the list
     void adopt(int id);
 
-    // based on desired_plants, finds a matching plant and returns it
-    // n = amount of plants in the available plants list
-    void findMatch(int n) const;
+    // based on desired_plants, finds a matching plant and adopts it
+    void findMatch() const;
 
     // returns the name of the adoptee
     string getName() const;
@@ -33,6 +30,9 @@ public:
 
     // return the number of plants this person owns
     int amount_owned() const;
+
+    // prints all the information of an adoptee
+    void info() const;
 
 private:
     string name;
