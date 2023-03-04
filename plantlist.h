@@ -2,8 +2,8 @@
 //Author: Miles G Date: march 4th
 #include <iostream>
 #include <vector>
+#include "adoptee.h"
 
-#define plant int
 using std::vector;
 
 class plantlist{
