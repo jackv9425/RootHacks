@@ -66,3 +66,7 @@ void Plant::setDetails() {
     cout << "How many hours of sun does this plant require per day?" << endl;
     cin >> sunPerDay; 
 }
+
+int Plant::getID(){
+    return ID;
+}

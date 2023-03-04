@@ -18,6 +18,7 @@ class Plant {
     void setLatinName();
     void setDescription();
     void setDetails();
+    int getID();
 
     private:
     int ID;
