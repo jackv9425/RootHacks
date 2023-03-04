@@ -11,7 +11,7 @@ public:
     plantlist();
     ~plantlist();
     bool addPlant(plant plant_to_add);
-    plant movePlant(int id);
+    plant& movePlant(int id);
     bool removePlant(plant plant_to_remove);
     void printAvailable();
     void printAdtopted();

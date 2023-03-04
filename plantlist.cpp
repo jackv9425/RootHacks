@@ -33,14 +33,20 @@ bool plantlist::removePlant(plant plant_to_remove){
 
 }
 
-plant plantlist::movePlant(int find_ID){
-    auto iter = std::find_if(availablePlants.begin(),availablePlants.end(), [](const plant& obj){
+plant& plantlist::movePlant(int find_ID){
+    auto iter = std::find_if(availablePlants.begin(),availablePlants.end(), [&](const plant& obj){
         return obj.ID.compare(find_ID) == 0;    
     });
     if(iter != availablePlants.end()){
         pastPlants.emplace_back(availablePlants.at(iter));
-
+        plant* ret_plant = pastPlants.at(pastPlants.back());
+        availablePlants.erase(iter);
+        return ret_plant;
     }
+    else{
+        return nullptr;
+    }
+    
 }
 
 void plantlist::printAvailable(){
