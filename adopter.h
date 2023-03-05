@@ -11,7 +11,7 @@ class Adopter {
 public:
     // METHODS
     // default constructor
-    Adopter(string input_name, int hours);
+    Adopter(string input_name, int phoneNumber);
 
     // inserts the name of a desired plant into the list via user input
     void desiredPlant();
@@ -20,13 +20,13 @@ public:
     void adopt(int id);
 
     // based on desired_plants, finds a matching plant and adopts it
-    void findMatch() const;
+    void findMatch();
 
     // returns the name of the adoptee
     string getName() const;
 
     //returns the amount of sunlight the adoptee can give
-    int amountSun() const;
+    int getPhone() const;
 
     // return the number of plants this person owns
     int amount_owned() const;
@@ -36,9 +36,9 @@ public:
 
 private:
     string name;
+    int phoneNumber;
     vector<Plant> plants_owned;
     vector<string> desired_plants;
-    int amount_sunlight;
     int amount_plants; //number of plants this person owns
     int amount_desired; //number of plants this person wants
 };
